@@ -1,0 +1,10 @@
+package com.devsuperior.dslearnbds.entities.login;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "tb_notification")
+public class Notification {
+
+}

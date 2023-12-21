@@ -17,3 +17,5 @@ INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Java Professional 1
 
 INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-07-13T20:50:07.12345Z', 1);
 INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-12-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-12-13T20:50:07.12345Z', 1);
+
+INSERT INTO tb_notification (text, moment, read, route, user_Id) VALUES ('Aprovado no desafio', TIMESTAMP WITH TIME ZONE '2023-07-14T20:50:07.12345Z', true, '/offers/1', 1)
