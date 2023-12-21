@@ -12,3 +12,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Java Professional 1', 'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 'https://www.asuprepdigital.org/wp-content/uploads/2021/02/hybrid-teacher.jpg');
+
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-07-13T20:50:07.12345Z', 1);
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-12-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-12-13T20:50:07.12345Z', 1);

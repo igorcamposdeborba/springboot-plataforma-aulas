@@ -1,0 +1,18 @@
+INSERT INTO tb_user (name, email, password) VALUES ('Ana Brow', 'ana@gmail.com', '$2a$12$OgpAGS1x8Coe68v0ZJja9uJn/aBqUNMFQLtympBliGm5JmpC4SMTy');
+INSERT INTO tb_user (name, email, password) VALUES ('Bob Smith', 'bob@gmail.com', '$2a$12$OgpAGS1x8Coe68v0ZJja9uJn/aBqUNMFQLtympBliGm5JmpC4SMTy');
+INSERT INTO tb_user (name, email, password) VALUES ('Maria Green', 'maria@gmail.com', '$2a$12$BCZmh8iO/cib7aKmh.zC/.sbJ.DOIUtqDMqkvXePhmcFGga9z3YzK');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_STUDENT');
+INSERT INTO tb_role (authority) VALUES ('ROLE_INSTRUCTOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Java Professional 1', 'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 'https://www.asuprepdigital.org/wp-content/uploads/2021/02/hybrid-teacher.jpg');
+
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('1', '2023-12-25T10:37:30.00Z', '2024-12-25T10:37:30.00Z', );
