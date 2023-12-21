@@ -1,0 +1,13 @@
+package com.devsuperior.dslearnbds.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_role")
+public class Role {
+	@Id
+	private long id;
+	private String authority;
+}

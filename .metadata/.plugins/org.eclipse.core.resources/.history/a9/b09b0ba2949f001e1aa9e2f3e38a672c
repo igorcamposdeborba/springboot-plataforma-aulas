@@ -1,0 +1,16 @@
+package com.devsuperior.dslearnbds.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "tb_user")
+public class User {
+
+	@Id
+	private long id;
+	private String name;
+	private String email;
+	
+}
