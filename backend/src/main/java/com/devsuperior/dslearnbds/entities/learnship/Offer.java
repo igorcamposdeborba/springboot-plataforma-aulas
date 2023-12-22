@@ -2,6 +2,8 @@ package com.devsuperior.dslearnbds.entities.learnship;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -10,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -28,6 +31,10 @@ public class Offer implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "course_Id")
 	private Course course;
+	
+	@OneToMany (mappedBy = "offer") // o atributo offer na classe Resource faz a ligação entre essas duas classes
+	private List<Resource> resource = new ArrayList<>();
+	
 	
 	public Offer() {}
 
@@ -69,6 +76,20 @@ public class Offer implements Serializable {
 
 	public void setEndMoment(Instant endMoment) {
 		this.endMoment = endMoment;
+	}
+	
+	
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	public List<Resource> getResource() {
+		return resource;
 	}
 
 	@Override

@@ -1,0 +1,36 @@
+package com.devsuperior.dslearnbds.entities.learnship;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.springframework.lang.Nullable;
+
+import com.devsuperior.dslearnbds.entities.learnship.enums.ResourceType;
+
+@Entity
+@Table (name = "tb_resource")
+public class Resource implements Serializable {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String title;
+	private String description;
+	private Integer position;
+	private String imgUri;
+	private ResourceType type;
+	@Nullable
+	private String externalLink;
+	
+	// Composição
+	@ManyToOne
+	@JoinColumn(name = "offer_Id")
+	private Offer offer;
+}

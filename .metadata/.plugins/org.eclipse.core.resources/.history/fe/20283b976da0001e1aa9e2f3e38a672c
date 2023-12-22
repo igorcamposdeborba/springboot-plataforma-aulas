@@ -1,0 +1,5 @@
+package com.devsuperior.dslearnbds.entities.learnship.enums;
+
+public class ResourceType {
+
+}
