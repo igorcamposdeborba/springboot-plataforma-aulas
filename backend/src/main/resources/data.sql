@@ -30,13 +30,13 @@ INSERT INTO tb_resource (title,
 					     type, 
 					     external_Link, 
 					     offer_Id) 
-	VALUES ('Trilha de aulas', 
-		    'Java completo', 
-		    1, 
-		    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
-		    1, 
-		    'https://google.com', 
-		    1);
+							VALUES ('Trilha de aulas', 
+								    'Java completo', 
+								    1, 
+								    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+								    1, 
+								    'https://google.com', 
+								    1);
 
 INSERT INTO tb_resource (title, 
 					     description, 
@@ -45,13 +45,13 @@ INSERT INTO tb_resource (title,
 					     type, 
 					     external_Link, 
 					     offer_Id) 
-	VALUES ('Fórum', 
-		    'Tire suas dúvidas', 
-		    2, 
-		    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
-		    2, 
-		    'https://google.com', 
-		    1);
+							VALUES ('Fórum', 
+								    'Tire suas dúvidas', 
+								    2, 
+								    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+								    2, 
+								    'https://google.com', 
+								    1);
 
 INSERT INTO tb_resource (title, 
 					     description, 
@@ -60,10 +60,36 @@ INSERT INTO tb_resource (title,
 					     type, 
 					     external_Link, 
 					     offer_Id) 
-	VALUES ('Lives', 
-		    'Aulas ao vivo', 
-		    3, 
-		    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
-		    0, 
-		    'https://google.com', 
-		    1);
+							VALUES ('Lives', 
+							    'Aulas ao vivo', 
+							    3, 
+							    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+							    0, 
+							    'https://google.com', 
+							    1);
+
+INSERT INTO tb_chapter (title,
+						description,
+						position,
+						img_Uri,
+						resource_Id,
+						prerequisite_Id)
+							VALUES('Visão geral do capítulo',
+							'https://drive.google.com/drive/folders/11_qnsv9Q3nPqoPWfaqeUwRhMz95o-OoS?usp=sharing',
+							1,
+							'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg',
+							1,
+							null);
+
+INSERT INTO tb_chapter (title,
+						description,
+						position,
+						img_Uri,
+						resource_Id,
+						prerequisite_Id)
+							VALUES('Visão geral do ecossistema Spring',
+							'Introdução ao Spring',
+							2,
+							'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg',
+							1,
+							1);

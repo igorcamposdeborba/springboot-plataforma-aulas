@@ -1,0 +1,95 @@
+-- Popular login (autenticação e autorização do OAuth2):
+INSERT INTO tb_user (name, email, password) VALUES ('Ana Brow', 'ana@gmail.com', '$2a$12$OgpAGS1x8Coe68v0ZJja9uJn/aBqUNMFQLtympBliGm5JmpC4SMTy');
+INSERT INTO tb_user (name, email, password) VALUES ('Bob Smith', 'bob@gmail.com', '$2a$12$OgpAGS1x8Coe68v0ZJja9uJn/aBqUNMFQLtympBliGm5JmpC4SMTy');
+INSERT INTO tb_user (name, email, password) VALUES ('Maria Green', 'maria@gmail.com', '$2a$12$BCZmh8iO/cib7aKmh.zC/.sbJ.DOIUtqDMqkvXePhmcFGga9z3YzK');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_STUDENT');
+INSERT INTO tb_role (authority) VALUES ('ROLE_INSTRUCTOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+-- Popular tabelas de aprendizagem:
+INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Java Professional 1', 'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 'https://www.asuprepdigital.org/wp-content/uploads/2021/02/hybrid-teacher.jpg');
+
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-07-13T20:50:07.12345Z', 1);
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_Id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-12-13T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2024-12-13T20:50:07.12345Z', 1);
+
+INSERT INTO tb_notification (text, moment, read, route, user_Id) VALUES ('Aprovado no desafio', TIMESTAMP WITH TIME ZONE '2023-07-14T20:50:07.12345Z', true, '/offers/1', 1);
+
+-- Popular resources (recursos das aulas):
+INSERT INTO tb_resource (title, 
+					     description, 
+					     position, 
+					     img_Uri, 
+					     type, 
+					     external_Link, 
+					     offer_Id) 
+							VALUES ('Trilha de aulas', 
+								    'Java completo', 
+								    1, 
+								    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+								    1, 
+								    'https://google.com', 
+								    1);
+
+INSERT INTO tb_resource (title, 
+					     description, 
+					     position, 
+					     img_Uri, 
+					     type, 
+					     external_Link, 
+					     offer_Id) 
+							VALUES ('Fórum', 
+								    'Tire suas dúvidas', 
+								    2, 
+								    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+								    2, 
+								    'https://google.com', 
+								    1);
+
+INSERT INTO tb_resource (title, 
+					     description, 
+					     position, 
+					     img_Uri, 
+					     type, 
+					     external_Link, 
+					     offer_Id) 
+							VALUES ('Lives', 
+							    'Aulas ao vivo', 
+							    3, 
+							    'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg', 
+							    0, 
+							    'https://google.com', 
+							    1);
+
+INSERT INTO tb_chapter (title,
+						description,
+						position,
+						img_Uri,
+						resource_Id,
+						prerequisite)
+							VALUES('Visão geral do capítulo',
+							'https://drive.google.com/drive/folders/11_qnsv9Q3nPqoPWfaqeUwRhMz95o-OoS?usp=sharing',
+							1,
+							'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg',
+							1,
+							null);
+
+INSERT INTO tb_chapter (title,
+						description,
+						position,
+						img_Uri,
+						resource_Id,
+						prerequisite)
+							VALUES('Visão geral do ecossistema Spring',
+							'Introdução ao Spring',
+							2,
+							'https://www.cypherlearning.com/hubfs/Imported_Blog_Media/A-teachers-guide-to-becoming-an-online-course-creator.jpg',
+							1,
+							1);

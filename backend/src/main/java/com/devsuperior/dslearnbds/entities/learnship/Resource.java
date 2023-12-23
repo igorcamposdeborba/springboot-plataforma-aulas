@@ -1,6 +1,8 @@
 package com.devsuperior.dslearnbds.entities.learnship;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.lang.Nullable;
@@ -35,6 +38,9 @@ public class Resource implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "offer_Id")
 	private Offer offer;
+	
+	@OneToMany(mappedBy = "resource") // nome do atributo resource pai na classe Chapter
+	private List<Chapter> chapters = new ArrayList<>();
 	
 	public Resource() {}
 
@@ -113,6 +119,11 @@ public class Resource implements Serializable {
 	public void setOffer(Offer offer) {
 		this.offer = offer;
 	}
+	
+	public List<Chapter> getChapters() {
+		return chapters;
+	}
+	
 
 	@Override
 	public int hashCode() {
