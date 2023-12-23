@@ -219,13 +219,12 @@ INSERT INTO tb_task (description,
 							   	       1.0,
 							   	       TIMESTAMP WITH TIME ZONE '2024-02-04T13:30:30.00Z',
 							   	       4);
-/* -- Alternativa para a forma abaixo, com 1 primary key
+/*
 INSERT INTO tb_lessons_done (lesson_id,
 							 enrollment_id) 
 							   VALUES (1,
 							   		   1);
 */
--- Primary Key composta com 2 primary keys:
 INSERT INTO tb_lessons_done (lesson_id,
 							 user_id,
 							 offer_id) 
@@ -237,5 +236,5 @@ INSERT INTO tb_lessons_done (lesson_id,
 							 user_id,
 							 offer_id) 
 							   VALUES (3,
-							   		   1,
-							   		   2);
+							   		   2,
+							   		   1);

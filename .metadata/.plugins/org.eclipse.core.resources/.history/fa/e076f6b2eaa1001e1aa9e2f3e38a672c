@@ -36,14 +36,14 @@ public abstract class Lesson implements Serializable { // abstract (herança tot
 	@JoinColumn(name = "chapter_Id")
 	private Chapter chapter;
 	
-	/* Alternativa para a forma abaixo, com 1 primary key
+	/* Alternativa para a forma abaixo
 	@ManyToMany // cria tabela intermediária
 	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
 				joinColumns = @JoinColumn(name = "lesson_id"),		// foreign key desta classe/tabela
 				inverseJoinColumns = @JoinColumn(name = "enrollment_id")) // foreign key da outra classe						 
 	private Set<EnrollmentAssociation> enrollmentsDone = new HashSet<>(); // Para saber qual matrícula (do aluno) terminou cada aula
 	*/
-	// Primary Key composta com 2 primary keys:
+	// Primary Key composta:
 	@ManyToMany // cria tabela intermediária
 	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
 				joinColumns = @JoinColumn(name = "lesson_Id"),		// foreign key desta classe/tabela
