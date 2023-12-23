@@ -18,6 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.sale.EnrollmentAssociation;
+import com.devsuperior.dslearnbds.entities.sale.association.Enrollment;
 
 @Entity
 @Table(name = "tb_lesson")
@@ -35,12 +36,23 @@ public abstract class Lesson implements Serializable { // abstract (herança tot
 	@JoinColumn(name = "chapter_Id")
 	private Chapter chapter;
 	
+	/*
 	@ManyToMany // cria tabela intermediária
 	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
 				joinColumns = @JoinColumn(name = "lesson_id"),		// foreign key desta classe/tabela
 				inverseJoinColumns = @JoinColumn(name = "enrollment_id")) // foreign key da outra classe						 
 	private Set<EnrollmentAssociation> enrollmentsDone = new HashSet<>(); // Para saber qual matrícula (do aluno) terminou cada aula
+	*/
+	@ManyToMany // cria tabela intermediária
+	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
+				joinColumns = @JoinColumn(name = "lesson_Id"),		// foreign key desta classe/tabela
+				inverseJoinColumns = {
+						@JoinColumn(name = "user_Id"),
+						@JoinColumn(name = "offer_Id")
+				}) // foreign key da outra classe						 
+	private Set<Enrollment> enrollmentsDone = new HashSet<>(); // Para saber qual matrícula (do aluno) terminou cada aula
 	
+			
 	public Lesson() {}
 
 	
@@ -83,7 +95,12 @@ public abstract class Lesson implements Serializable { // abstract (herança tot
 		this.chapter = chapter;
 	}
 
+	/*
 	public Set<EnrollmentAssociation> getEnrollmentsDone(){
+		return enrollmentsDone;
+	}
+	*/
+	public Set<Enrollment> getEnrollmentsDone(){
 		return enrollmentsDone;
 	}
 	// Não colocar nunca set para a estrutura de dados Set

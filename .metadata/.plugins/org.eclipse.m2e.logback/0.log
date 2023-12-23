@@ -2420,3 +2420,38 @@
 2023-12-23 16:52:00,119 [Worker-328: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-12-23 16:52:00,119 [Worker-328: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2023-12-23 16:52:00,119 [Worker-328: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
+2023-12-23 20:10:26,625 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:10:26,625 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:10:26,626 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-12-23 20:10:26,626 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-23 20:10:26,629 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:10:26,629 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:10:26,629 [Worker-346: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
+2023-12-23 20:10:30,364 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:10:30,364 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:10:30,365 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-12-23 20:10:30,481 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-23 20:10:30,484 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:10:30,484 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:10:30,484 [Worker-349: Launching backend - DslearnbdsApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
+2023-12-23 20:13:20,620 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:13:20,620 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:13:20,620 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-12-23 20:13:20,661 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-23 20:13:20,663 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:13:20,663 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:13:20,663 [Worker-324: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
+2023-12-23 20:14:19,411 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:14:19,411 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:14:19,411 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-12-23 20:14:19,420 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-23 20:14:19,422 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:14:19,422 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:14:19,422 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
+2023-12-23 20:15:19,074 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:15:19,074 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:15:19,074 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-12-23 20:15:19,074 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-23 20:15:19,076 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-23 20:15:19,076 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-12-23 20:15:19,076 [Worker-357: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Exercicios\NelioAlves\SpringBoot\dominioOrmAutorizacoes\plataformaDeAulas\backend\src\test\resources
