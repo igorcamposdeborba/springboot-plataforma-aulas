@@ -16,10 +16,11 @@ import javax.persistence.Table;
 
 import org.springframework.lang.Nullable;
 
+import com.devsuperior.dslearnbds.entities.learnship.classroom.Chapter;
 import com.devsuperior.dslearnbds.entities.learnship.enums.ResourceType;
 
 @Entity
-@Table (name = "tb_resource")
+@Table (name = "tb_resource") // Resource é qual o tipo de material de aula (video-aulas, suporte, lives, fórum, etc)
 public class Resource implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

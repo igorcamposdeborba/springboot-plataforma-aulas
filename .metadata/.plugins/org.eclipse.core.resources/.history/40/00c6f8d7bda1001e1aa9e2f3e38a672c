@@ -1,0 +1,10 @@
+package com.devsuperior.dslearnbds.entities.learnship.classroom;
+
+import java.io.Serializable;
+
+public class Task extends Lesson implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	public Task() {}
+	
+}

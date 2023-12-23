@@ -1,0 +1,110 @@
+package com.devsuperior.dslearnbds.entities.learnship.classroom;
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.devsuperior.dslearnbds.entities.sale.EnrollmentAssociation;
+
+@Entity
+@Table(name = "tb_lesson")
+@Inheritance (strategy = InheritanceType.JOINED) // Herança: obrigatório colocar. Joined cria uma tabela para cada superclasse e subclasse. Table_per_class cria uma tabela para cada subclasse, single_table é criar um tabelão com atributos null no objeto da subclasse que não to instanciando
+public abstract class Lesson implements Serializable { // abstract (herança total) para garantir que a classe não pode ser instanciada porque um Lesson (atividade) não existe sozinha. Ela é uma Task (tarefa) ou um Content (vídeo/material)
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String title;
+	private Integer position;
+	
+	@ManyToOne
+	@JoinColumn(name = "chapter_Id")
+	private Chapter chapter;
+	
+	@ManyToMany
+	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
+				joinColumns = @JoinColumn(name = "lesson_id"),		// foreign key desta classe/tabela
+				inverseJoinColumns = @JoinColumn(name = "enrollment_id")) // foreign key da outra classe						 
+	private Set<EnrollmentAssociation> enrollmentsDone = new HashSet<>(); // Para saber qual matrícula (do aluno) terminou cada aula
+	
+	public Lesson() {}
+
+	
+	public Lesson(Long id, String title, Integer position, Chapter chapter) {
+		this.id = id;
+		this.title = title;
+		this.position = position;
+		this.chapter = chapter;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Integer getPosition() {
+		return position;
+	}
+
+	public void setPosition(Integer position) {
+		this.position = position;
+	}
+
+	public Chapter getChapter() {
+		return chapter;
+	}
+
+	public void setChapter(Chapter chapter) {
+		this.chapter = chapter;
+	}
+
+	public Set<EnrollmentAssociation> getEnrollmentsDone(){
+		return enrollmentsDone;
+	}
+	// Não colocar nunca set para a estrutura de dados Set
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Lesson other = (Lesson) obj;
+		return Objects.equals(id, other.id);
+	}
+	
+	
+	
+}

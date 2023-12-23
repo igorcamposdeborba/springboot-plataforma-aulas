@@ -37,7 +37,7 @@ public class User implements Serializable {
 	// composição
 	@ManyToMany (fetch= FetchType.EAGER) // relacionamento muitos para muitos cria tabela intermediária. O Eager puxa outra tabela junto na busca do banco de dados, que aqui é o Role dos users
 	@JoinTable (name = "tb_user_role",							    // nome da tabela intermediária
-				joinColumns = @JoinColumn(name = "user.id"),		// foreign key desta classe/tabela
+				joinColumns = @JoinColumn(name = "user_id"),		// foreign key desta classe/tabela
 				inverseJoinColumns = @JoinColumn(name = "role_id")) // foreign key da outra classe 
 	private Set<Role> roles;
 	

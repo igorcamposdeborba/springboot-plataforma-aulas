@@ -21,7 +21,7 @@ import javax.persistence.Table;
 import com.devsuperior.dslearnbds.entities.sale.EnrollmentAssociation;
 
 @Entity
-@Table (name = "tb_offer")
+@Table (name = "tb_offer") // Versão do curso. Exemplo: 1.0 ou 2.0
 public class Offer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
