@@ -1,0 +1,33 @@
+package com.devsuperior.dslearnbds.entities.sale.association;
+
+import java.io.Serializable;
+import java.time.Instant;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "tb_enrollment")
+public class Enrollment implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	// Na Relação many to many crie uam chave composta.
+	private EnrollmentPK id = new EnrollmentPK(); // Primary key juntando duas foreign key: chave primária associativa
+												  // Obrigatório instanciar chave composta
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant enrollMoment;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant refundMoment;
+	private boolean isAvailable;
+	private boolean isOnlyUpdate;
+
+	public Enrollment() {}
+	
+	
+	
+}

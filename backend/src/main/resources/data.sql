@@ -135,3 +135,29 @@ INSERT INTO tb_enrollment_association (enroll_Moment,
 							false,
 							2,
 							1);
+
+INSERT INTO tb_enrollment (enroll_Moment,
+						   refund_Moment,
+						   is_Available,
+						   is_Only_Update,
+						   user_Id, 
+						   offer_Id)
+							   VALUES (TIMESTAMP WITH TIME ZONE '2023-02-03T13:31:30.00Z',
+							   null,
+							   true,
+							   false,
+							   1,
+							   1);
+
+INSERT INTO tb_enrollment (enroll_Moment,
+						   refund_Moment,
+						   is_Available,
+						   is_Only_Update,
+						   user_Id, 
+						   offer_Id)
+							   VALUES (TIMESTAMP WITH TIME ZONE '2023-02-04T13:30:30.00Z',
+							   null,
+							   true,
+							   false,
+							   2,
+							   1);

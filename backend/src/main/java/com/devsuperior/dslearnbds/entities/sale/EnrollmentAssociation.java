@@ -2,10 +2,7 @@ package com.devsuperior.dslearnbds.entities.sale;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import com.devsuperior.dslearnbds.entities.learnship.Offer;
 import com.devsuperior.dslearnbds.entities.login.User;
 
@@ -27,7 +25,7 @@ public class EnrollmentAssociation implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE") // Padrão UTC de data para compatibilidade entre banco de dados diferentes
 	private Instant enrollMoment;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")

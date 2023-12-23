@@ -1,0 +1,5 @@
+package com.devsuperior.dslearnbds.entities.sale;
+
+public class EnrollmentPK {
+
+}

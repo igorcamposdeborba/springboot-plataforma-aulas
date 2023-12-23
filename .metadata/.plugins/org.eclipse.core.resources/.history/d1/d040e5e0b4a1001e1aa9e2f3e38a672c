@@ -1,0 +1,15 @@
+package com.devsuperior.dslearnbds.entities.sale.association;
+
+import java.io.Serializable;
+
+import com.devsuperior.dslearnbds.entities.learnship.Offer;
+import com.devsuperior.dslearnbds.entities.login.User;
+
+public class EnrollmentPK implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private User user;
+	private Offer offer;
+	
+	public EnrollmentPK() {}
+}

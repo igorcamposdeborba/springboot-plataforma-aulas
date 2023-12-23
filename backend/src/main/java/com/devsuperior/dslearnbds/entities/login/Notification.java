@@ -2,6 +2,7 @@ package com.devsuperior.dslearnbds.entities.login;
 
 import java.time.Instant;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,7 @@ public class Notification {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String text;
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE") // Padrão UTC de data para compatibilidade entre banco de dados diferentes
 	private Instant moment;
 	private boolean read;
 	private String route;
