@@ -197,6 +197,6 @@ INSERT INTO tb_lesson (title,
 INSERT INTO tb_content (text_content, 
 						video_uri, 
 						id) 
-							   VALUES (null,
+							   VALUES ('',
 							   	       'https://youtube.com',
 							   	       3);

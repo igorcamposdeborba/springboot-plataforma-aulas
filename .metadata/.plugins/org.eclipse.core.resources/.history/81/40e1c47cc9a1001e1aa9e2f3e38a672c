@@ -186,7 +186,7 @@ INSERT INTO tb_content (text_content,
 						id) 
 							   VALUES ('Download do Eclipse: https://eclipse.com',
 							   	       'https://youtube.com',
-							   	       2);
+							   	       1);
 							   	       
 INSERT INTO tb_lesson (title,
 					   position,
@@ -197,6 +197,6 @@ INSERT INTO tb_lesson (title,
 INSERT INTO tb_content (text_content, 
 						video_uri, 
 						id) 
-							   VALUES (null,
+							   VALUES ('',
 							   	       'https://youtube.com',
-							   	       3);
+							   	       2);

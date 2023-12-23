@@ -164,39 +164,33 @@ INSERT INTO tb_enrollment (enroll_Moment,
 
 INSERT INTO tb_lesson (title,
 					   position,
-					   chapter_Id)
+					   chapter)
 							   VALUES ('01 Visão geral do capítulo',
 							   		   1,
 							   		   1);
-INSERT INTO tb_content (text_content, 
-						video_uri, 
-						id) 
+INSERT INTO tb_content (text_content, video_uri, lesson_id) 
 							   VALUES ('Material de apoio: https://google.com',
 							   	       'https://youtube.com',
 							   	       1);
 							   	       
 INSERT INTO tb_lesson (title,
 					   position,
-					   chapter_Id)
+					   chapter)
 							   VALUES ('02 Configuração do ambiente',
 							   		   2,
 							   		   1);
-INSERT INTO tb_content (text_content, 
-						video_uri, 
-						id) 
+INSERT INTO tb_content (text_content, video_uri, lesson_id) 
 							   VALUES ('Download do Eclipse: https://eclipse.com',
 							   	       'https://youtube.com',
-							   	       2);
+							   	       1);
 							   	       
 INSERT INTO tb_lesson (title,
 					   position,
-					   chapter_Id)
+					   chapter)
 							   VALUES ('01 Aula de Introdução',
 							   		   1,
 							   		   2);
-INSERT INTO tb_content (text_content, 
-						video_uri, 
-						id) 
-							   VALUES (null,
+INSERT INTO tb_content (text_content, video_uri, lesson_id) 
+							   VALUES ('',
 							   	       'https://youtube.com',
-							   	       3);
+							   	       2);
