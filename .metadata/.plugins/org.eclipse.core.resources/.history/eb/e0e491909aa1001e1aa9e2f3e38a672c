@@ -1,0 +1,6 @@
+spring.profiles.active=${APP_PROFILE:test}
+
+spring.jpa.open-in-view=false
+
+# Configuração do nível de log global para DEBUG
+logging.level.root=DEBUG

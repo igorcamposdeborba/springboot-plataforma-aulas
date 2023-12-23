@@ -2,6 +2,7 @@ package com.devsuperior.dslearnbds.entities.login;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -17,6 +18,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.devsuperior.dslearnbds.entities.sale.EnrollmentAssociation;
 
 @Entity
 @Table (name = "tb_user")
@@ -40,6 +43,10 @@ public class User implements Serializable {
 	
 	@OneToMany(mappedBy = "user")
 	private List<Notification> notifications = new ArrayList<>();
+	
+	// classe/tabela associativa
+	@OneToMany (mappedBy = "user")
+	private Set<EnrollmentAssociation> enrollment = new HashSet<>();
 	
 	public User() {}
 	

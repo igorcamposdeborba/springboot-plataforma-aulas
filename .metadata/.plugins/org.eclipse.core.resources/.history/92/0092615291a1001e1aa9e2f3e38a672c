@@ -1,0 +1,32 @@
+package com.devsuperior.dslearnbds.entities.sale;
+
+import java.io.Serializable;
+import java.time.Instant;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.devsuperior.dslearnbds.entities.login.User;
+
+@Entity
+public class EnrollmentAssociation implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private Instant enrollMoment;
+	private Instant refundMoment;
+	private boolean idAvailable;
+	private boolean isOnlyUpdate;
+	
+	// associação de muitos para muitos
+	private User user;
+	private Offer offer;
+	
+	public EnrollmentAssociation() {}
+	
+}

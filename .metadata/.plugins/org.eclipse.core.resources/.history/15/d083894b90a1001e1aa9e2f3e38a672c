@@ -1,0 +1,10 @@
+package com.devsuperior.dslearnbds.entities.sale;
+
+import java.io.Serializable;
+
+public class EnrollmentAssociation implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	
+	
+}
