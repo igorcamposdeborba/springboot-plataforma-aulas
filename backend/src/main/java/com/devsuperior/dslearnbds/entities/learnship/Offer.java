@@ -36,7 +36,7 @@ public class Offer implements Serializable {
 	
 	// composição
 	@ManyToOne
-	@JoinColumn(name = "course_Id")
+	@JoinColumn(name = "course_id")
 	private Course course;
 	
 	@OneToMany (mappedBy = "offer") // o atributo offer na classe Resource faz a ligação entre essas duas classes

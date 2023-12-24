@@ -1,7 +1,9 @@
 package com.devsuperior.dslearnbds.entities.learnship.classroom;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,9 +17,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.devsuperior.dslearnbds.entities.sale.EnrollmentAssociation;
 import com.devsuperior.dslearnbds.entities.sale.association.Enrollment;
 
 @Entity
@@ -46,13 +48,15 @@ public abstract class Lesson implements Serializable { // abstract (herança tot
 	// Primary Key composta com 2 primary keys:
 	@ManyToMany // cria tabela intermediária
 	@JoinTable (name = "tb_lessons_done",							// nome da tabela intermediária
-				joinColumns = @JoinColumn(name = "lesson_Id"),		// foreign key desta classe/tabela
+				joinColumns = @JoinColumn(name = "lesson_id"),		// foreign key desta classe/tabela
 				inverseJoinColumns = {
-						@JoinColumn(name = "user_Id"),
-						@JoinColumn(name = "offer_Id")
+						@JoinColumn(name = "user_id"),
+						@JoinColumn(name = "offer_id")
 				}) // foreign key da outra classe						 
 	private Set<Enrollment> enrollmentsDone = new HashSet<>(); // Para saber qual matrícula (do aluno) terminou cada aula
 	
+	@OneToMany (mappedBy = "lesson")
+	private List <DeliverTask> deliveries = new ArrayList<>();
 			
 	public Lesson() {}
 
@@ -106,6 +110,10 @@ public abstract class Lesson implements Serializable { // abstract (herança tot
 	}
 	// Não colocar nunca set para a estrutura de dados Set
 
+	public List<DeliverTask> getDeliveries(){
+		return deliveries;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

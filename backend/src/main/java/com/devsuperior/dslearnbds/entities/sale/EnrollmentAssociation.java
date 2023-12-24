@@ -35,12 +35,12 @@ public class EnrollmentAssociation implements Serializable {
 	
 	// ! Associação de muitos para muitos -> primary key composta (Users e Offers)
 	@ManyToOne (optional = true, fetch = FetchType.EAGER) // @ManyToOne: porque muitas matrículas (Enrollment) têm um aluno (User)
-	@JoinColumn (name = "user_Id") // nome da coluna
+	@JoinColumn (name = "user_id") // nome da coluna
 	private User user;			  						  // optional = true: porque um aluno pode não estar matriculado em nenhuma versão (oferta = Offer) de curso (Course)
 														  // Eager: porque é obrigado a buscar todas as tabelas quando se faz um get de User ou Offer porque é uma operação comum. Desvantagem: é lenta com grandes tabelas
 	
 	@ManyToOne (optional = true, fetch = FetchType.EAGER) // Muitas matrículas estão em uma oferta (offer) de curso (course)
-	@JoinColumn (name = "offer_Id")
+	@JoinColumn (name = "offer_id")
 	private Offer offer;
 	
 	public EnrollmentAssociation() {}

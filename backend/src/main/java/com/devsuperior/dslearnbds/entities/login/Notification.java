@@ -27,7 +27,7 @@ public class Notification implements Serializable {
 	
 	// composição
 	@ManyToOne
-	@JoinColumn(name = "user_Id")
+	@JoinColumn(name = "user_id")
 	private User user;
 	
 	public Notification() {}

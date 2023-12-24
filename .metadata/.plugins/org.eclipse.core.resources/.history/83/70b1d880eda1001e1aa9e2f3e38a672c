@@ -1,0 +1,7 @@
+package com.devsuperior.dslearnbds.entities.learnship.classroom;
+
+import java.io.Serializable;
+
+public class DeliverTask implements Serializable {
+
+}

@@ -31,7 +31,7 @@ public class Chapter implements Serializable {
 	
 	// Composição
 	@ManyToOne
-	@JoinColumn(name = "resource_Id")
+	@JoinColumn(name = "resource_id")
 	private Resource resource;
 	
 	@OneToMany (mappedBy = "chapter")
@@ -39,7 +39,7 @@ public class Chapter implements Serializable {
 	
 	// Autoassociação unidirecional: um capítulo (chapter) pode ser pré-requisito para fazer outro capítulo.
 	@ManyToOne
-	@JoinColumn(name = "prerequisite_Id")
+	@JoinColumn(name = "prerequisite_id")
 	private Chapter prerequisite;
 	
 	public Chapter() {}

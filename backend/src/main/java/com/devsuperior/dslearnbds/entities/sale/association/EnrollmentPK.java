@@ -15,10 +15,10 @@ public class EnrollmentPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne // Muitas matrículas (Enrollmente) para um usuário (User)
-	@JoinColumn (name = "user_Id") // nome da Foreign Key
+	@JoinColumn (name = "user_id") // nome da Foreign Key
 	private User user;
 	@ManyToOne
-	@JoinColumn (name = "offer_Id")
+	@JoinColumn (name = "offer_id")
 	private Offer offer;
 	
 	public EnrollmentPK() {}

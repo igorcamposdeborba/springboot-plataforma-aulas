@@ -37,7 +37,7 @@ public class Resource implements Serializable {
 	
 	// Associação
 	@ManyToOne
-	@JoinColumn(name = "offer_Id")
+	@JoinColumn(name = "offer_id")
 	private Offer offer;
 	
 	@OneToMany(mappedBy = "resource") // nome do atributo resource pai na classe Chapter

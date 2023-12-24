@@ -1,0 +1,24 @@
+package com.devsuperior.dslearnbds.entities.learnship.classroom;
+
+import java.io.Serializable;
+import java.time.Instant;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "tb_deliver_task")
+public class DeliverTask implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	private Long id;
+	private String url;
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant moment;
+	
+	public DeliverTask() {}
+	
+}
